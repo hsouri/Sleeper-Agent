@@ -1,6 +1,6 @@
 # Sleeper Agent: Scalable Hidden Trigger Backdoors for Neural Networks Trained from Scratch
 
-This code is the official PyTroch implementation of the Sleeper Agent. The implementation is based on on [Industrial Scale Data Poisoning via Gradient Matching](https://github.com/JonasGeiping/poisoning-gradient-matching). 
+This code is the official PyTroch implementation of the [Sleeper Agent](https://arxiv.org/abs/2106.08970). Our implementation is based on [Industrial Scale Data Poisoning via Gradient Matching](https://github.com/JonasGeiping/poisoning-gradient-matching).
 
 
 ## Dependencies
@@ -40,6 +40,16 @@ python sleeper_agent.py --patch_size 30 --budget 0.0005 --pbatch 128 --epochs 80
 ## Citations
 
 
-Our code is based on the following open source repository:
+Please cite Sleeper Agent paper:
 
-[Industrial Scale Data Poisoning via Gradient Matching](https://github.com/JonasGeiping/poisoning-gradient-matching) [Geiping et al. 2020]
+
+```
+@misc{souri2021sleeper,
+      title={Sleeper Agent: Scalable Hidden Trigger Backdoors for Neural Networks Trained from Scratch}, 
+      author={Hossein Souri and Micah Goldblum and Liam Fowl and Rama Chellappa and Tom Goldstein},
+      year={2021},
+      eprint={2106.08970},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
