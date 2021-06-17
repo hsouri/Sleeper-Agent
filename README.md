@@ -2,7 +2,7 @@
 
 This code is the official PyTroch implementation of the [Sleeper Agent](https://arxiv.org/abs/2106.08970). Our implementation is based on [Industrial Scale Data Poisoning via Gradient Matching](https://github.com/JonasGeiping/poisoning-gradient-matching).
 
-![Overview](schematic.pfg)
+![Overview](schematic.png)
 
 
 ## Dependencies
