@@ -46,12 +46,10 @@ Please cite Sleeper Agent paper:
 
 
 ```
-@misc{souri2021sleeper,
-      title={Sleeper Agent: Scalable Hidden Trigger Backdoors for Neural Networks Trained from Scratch}, 
-      author={Hossein Souri and Micah Goldblum and Liam Fowl and Rama Chellappa and Tom Goldstein},
-      year={2021},
-      eprint={2106.08970},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+@article{souri2021sleeper,
+  title={Sleeper Agent: Scalable Hidden Trigger Backdoors for Neural Networks Trained from Scratch},
+  author={Souri, Hossein and Goldblum, Micah and Fowl, Liam and Chellappa, Rama and Goldstein, Tom},
+  journal={arXiv preprint arXiv:2106.08970},
+  year={2021}
 }
 ```
