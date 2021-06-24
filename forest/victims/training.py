@@ -378,8 +378,6 @@ def _split_data(inputs, labels, source_selection='sep-half'):
 
 def get_optimizers(model, args, defs):
     """Construct optimizer as given in defs."""
-    # For transfer learning, we restrict the parameters to be optimized.
-    # This filter should only trigger if self.args.scenario == 'transfer'
     optimized_parameters = filter(lambda p: p.requires_grad, model.parameters())
 
     if defs.optimizer == 'SGD':
@@ -395,8 +393,6 @@ def get_optimizers(model, args, defs):
 
     if defs.scheduler == 'cyclic':
         effective_batches = (50_000 // defs.batch_size) * defs.epochs
-        # todo: unmake this magic number that only works on cifar.
-        # but when are we going to use this scheduler anyway?
         print(f'Optimization will run over {effective_batches} effective batches in a 1-cycle policy.')
         scheduler = torch.optim.lr_scheduler.CyclicLR(optimizer, base_lr=defs.lr / 100, max_lr=defs.lr,
                                                       step_size_up=effective_batches // 2,
