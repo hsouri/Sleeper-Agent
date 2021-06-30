@@ -107,7 +107,7 @@ class WitchGradientMatching(_Witch):
             resize = torchvision.transforms.Resize(int(self.args.patch_size))
             patch = totensor(resize(patch))
 
-        patch = patch.to(**self.setup) / kettle.ds
+        patch = (patch.to(**self.setup) - kettle.dm) / kettle.ds
         self.patch = patch.squeeze(0)
 
         
