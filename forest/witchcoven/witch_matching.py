@@ -286,20 +286,12 @@ class WitchGradientMatchingHidden(WitchGradientMatching):
                 clean_inputs, _, _ = kettle.mixer(clean_inputs, labels)
 
             if self.args.padversarial is not None:
-                # The optimal choice of the 3rd and 4th argument here are debatable
-                # This is likely the strongest anti-defense:
-                # but the defense itself splits the batch and uses half of it as sources
-                # instead of using the known source [as the defense does not know about the source]
-                # delta = self.attacker.attack(inputs.detach(), labels,
-                #                              self.sources, self.true_classes, steps=victim.defs.novel_defense['steps'])
-
-                # This is a more accurate anti-defense:
                 [temp_sources, inputs,
                  temp_true_labels, labels,
                  temp_fake_label] = _split_data(inputs, labels, source_selection=victim.defs.novel_defense['source_selection'])
                 delta, additional_info = self.attacker.attack(inputs.detach(), labels,
                                                               temp_sources, temp_fake_label, steps=victim.defs.novel_defense['steps'])
-                inputs = inputs + delta  # Kind of a reparametrization trick
+                inputs = inputs + delta
                 clean_inputs = clean_inputs + delta
 
 
