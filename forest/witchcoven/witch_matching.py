@@ -169,8 +169,7 @@ class WitchGradientMatchingNoisy(WitchGradientMatching):
 
     def _initialize_brew(self, victim, kettle):
         super()._initialize_brew(victim, kettle)
-        self.defs = victim.defs  # leaking abstractions here, but only for this adaptive attack subset :>
-
+        self.defs = victim.defs
 
     def _define_objective(self, inputs, labels, criterion, sources, target_classes, true_classes):
         """Implement the closure here."""
