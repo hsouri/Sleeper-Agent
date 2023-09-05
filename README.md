@@ -17,9 +17,13 @@ This code is the official PyTroch implementation of the [Sleeper Agent](https://
 
 ## USAGE
 
-The wrapper for the Sleeper Agent can be found in sleeper_agent.py. The default values are set for attacking ResNet-18 on CIFAR-10.
+The wrapper for the Sleeper Agent can be found in sleeper_agent.py. To craft poisons on CIFAR-10 and ResNet18 with the default values, you can use the following command:
 
-There are a buch of optional arguments in the ```forest/options.py```. Here are some of them:
+```shell
+python sleeper_agent.py
+```
+
+There are a bunch of optional arguments in the ```forest/options.py```. Here are some of them:
 
 - ```--patch_size```, ```--eps```, and ```--budget``` : determine the power of backdoor attack.
 - ```--dataset``` : which dataset to poison.
@@ -42,7 +46,7 @@ python sleeper_agent.py --patch_size 30 --budget 0.0005 --pbatch 128 --epochs 80
 ## Citations
 
 
-Please cite Sleeper Agent paper:
+Please cite the Sleeper Agent paper:
 
 
 ```
