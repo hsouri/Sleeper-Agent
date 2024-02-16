@@ -145,7 +145,7 @@ def options():
     parser.add_argument('--sources_train', default=5000, type=int, help='Number of sources for training')
     parser.add_argument('--source_gradient_batch', default=2500, type=int, help='Batch size for sources train gradient computing')
     parser.add_argument('--val_max_epoch', default=80, type=int, help='Train only up to this epoch for final validation.')
-    parser.add_argument('--retrain_max_epoch', default=40, type=int, help='Train only up to this epoch for retraining during crafting.')
+    parser.add_argument('--retrain_max_epoch', default=None, type=int, help='Train only up to this epoch for retraining during crafting.')
     parser.add_argument('--retrain_scenario', default='from-scratch', type=str, choices=['from-scratch', 'finetuning'])
     parser.add_argument('--load_feature_repr', action='store_true', help='Load feature representation of the model trained on clean data')
     parser.add_argument('--random_patch', action='store_true', default=True, help='Adding patch to sources on a random location')
