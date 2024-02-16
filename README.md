@@ -38,7 +38,7 @@ There are a bunch of optional arguments in the ```forest/options.py```. Here are
 To craft poisons on ImageNet and ResNet18 you can use the following sample command:
 
 ```shell
-python sleeper_agent.py --patch_size 30 --budget 0.0005 --pbatch 128 --epochs 80 --sources 50 --dataset ImageNet --pretrained_model --data_path /your/path/to/ImageNet --pbatch 128 --source_gradient_batch 300
+python sleeper_agent.py --patch_size 30 --budget 0.0005 --pbatch 128 --sources 50 --dataset ImageNet --pretrained_model --data_path /your/path/to/ImageNet --source_gradient_batch 300
 ```
 
 
